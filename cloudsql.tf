@@ -23,7 +23,7 @@ resource "google_sql_user" "sql_user" {
   name     = "root"
   instance = "${google_sql_database_instance.hive_metastore_instance.name}"
   project  = "${var.project}"
-  password = "changeme"
+  password = ""
   host     = "%"
 
   lifecycle {
