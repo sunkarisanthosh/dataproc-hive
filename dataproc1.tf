@@ -1,4 +1,4 @@
-resource "google_dataproc_cluster" "cluster1" {
+/*resource "google_dataproc_cluster" "cluster1" {
   name       = "${var.project}-cluster1"
   region     = "${var.region}"
   project    = "${var.project}"
@@ -76,4 +76,4 @@ resource "google_dataproc_job" "cluster1_pyspark" {
       "spark.logConf" = "true"
     }
   }
-}
+}*/
