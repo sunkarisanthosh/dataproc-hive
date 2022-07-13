@@ -43,7 +43,7 @@ USE_CLOUD_SQL_PRIVATE_IP="$(/usr/share/google/get_metadata_value attributes/use-
 readonly USE_CLOUD_SQL_PRIVATE_IP
 
 # Database user to use to access metastore.
-DB_HIVE_USER="$(/usr/share/google/get_metadata_value attributes/db-hive-user || echo 'hive')"
+DB_HIVE_USER="$(/usr/share/google/get_metadata_value attributes/db-hive-user || echo 'postgres')"
 readonly DB_HIVE_USER
 
 DB_ADMIN_USER="$(/usr/share/google/get_metadata_value attributes/db-admin-user || echo 'root')"
@@ -110,7 +110,7 @@ METASTORE_PROXY_PORT="$(/usr/share/google/get_metadata_value attributes/metastor
 if [[ "${METASTORE_INSTANCE}" =~ =tcp:[0-9]+$ ]]; then
   METASTORE_PROXY_PORT="${METASTORE_INSTANCE##*:}"
 else
-  METASTORE_PROXY_PORT='5432'
+  METASTORE_PROXY_PORT='5432' 
 fi
 readonly METASTORE_PROXY_PORT
 
