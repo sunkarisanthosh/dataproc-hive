@@ -293,6 +293,7 @@ EOF
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
     <value>jdbc:postgresql://studious-ethos-354415:us-central1:dataproc:${METASTORE_PROXY_PORT}/${METASTORE_DB}</value>
+    #https://jdbc.postgresql.org/download/postgresql-42.2.5.jar
     <description>the URL of the postgresql database</description>
   </property>
   <property>
